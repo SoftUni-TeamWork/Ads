@@ -1,0 +1,54 @@
+﻿@{ string title = "Ads - " + PageData["title"] ?? ""; }
+
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title ng-bind="title">@(title)</title>
+        <meta name="description" content="@PageData["description"]">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        @Styles.Render("~/content/css/app")
+    </head>
+    <body>
+        <!--[if lt IE 9]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+        <header ng-if="!layout" class="page-header">
+            @* The 'layout' property is set inside the app.run(..) method on '$stateChangeSuccess' *@
+            <div>
+                <h1 class="text-center">@(title)</h1>
+            </div>
+        </header>
+        
+        <div class="container">
+            <div class="row">
+                <nav class="col-md-3">
+                    <ul class="nav nav-pills nav-stacked">
+                        <li class="nav-header disabled">
+                            <h2>Navigation</h2>
+                        </li>
+                        <li class="active">
+                            <a href="/">Home</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="col-md-9 row" id="ui-view" ui-view data-tmpl-url="@Request.RequestContext.RouteData.DataTokens["templateUrl"]">
+                    @RenderBody()
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="text-center panel-footer">
+                <p>© 2014 by Software University Foundation, No Rights Reserved</p>
+            </div>
+        </footer>
+
+        @Scripts.Render("~/js/jquery")
+        @Scripts.Render("~/js/angular")
+        @Scripts.Render("~/js/app")
+    </body>
+</html>
