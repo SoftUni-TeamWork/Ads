@@ -24,7 +24,7 @@ namespace Ads.Web.Properties {
         }
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.NonUserCodeAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("10")]
         public int DefaultPageSize {
             get {

@@ -1,11 +1,12 @@
 ﻿'use strict';
 
 // Declares how the application should be bootstrapped. See: http://docs.angularjs.org/guide/module
-angular.module('app', ['ui.router', 'app.filters', 'app.services', 'app.directives', 'app.controllers', 'ngResource'])
 
+var app = angular.module('app', ['ui.router', 'app.filters', 'app.services', 'app.directives', 'app.controllers', 'ngResource']);
+console.log("sled");
     // Gets executed during the provider registrations and configuration phase. Only providers and constants can be
     // injected here. This is to prevent accidental instantiation of services before they have been fully configured.
-    .config(['$stateProvider', '$locationProvider', function ($stateProvider, $locationProvider) {
+    app.config(['$stateProvider', '$locationProvider', function ($stateProvider, $locationProvider) {
 
         // UI States, URL Routing & Mapping. For more info see: https://github.com/angular-ui/ui-router
         // ------------------------------------------------------------------------------------------------------------
@@ -14,24 +15,19 @@ angular.module('app', ['ui.router', 'app.filters', 'app.services', 'app.directiv
             .state('home', {
                 url: '/',
                 templateUrl: '/views/index',
-                controller: 'HomeCtrl'
+                controller: 'HomeController'
 
-            })
-            .state('about', {
-                url: '/about',
-                templateUrl: '/views/about',
-                controller: 'AboutCtrl'
             })
             .state('login', {
                 url: '/login',
                 layout: 'basic',
                 templateUrl: '/views/login',
-                controller: 'LoginCtrl'
+                controller: 'LoginController'
             })
             .state('otherwise', {
                 url: '*path',
                 templateUrl: '/views/404',
-                controller: 'Error404Ctrl'
+                controller: 'Error404Controller'
             });
 
         $locationProvider.html5Mode(true);
@@ -52,7 +48,6 @@ angular.module('app', ['ui.router', 'app.filters', 'app.services', 'app.directiv
         $rootScope.$stateParams = $stateParams;
 
         $rootScope.$on('$stateChangeSuccess', function (event, toState) {
-            ;
             // Sets the layout name, which can be used to display different layouts (header, footer etc.)
             // based on which page the user is located
             $rootScope.layout = toState.layout;
