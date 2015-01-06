@@ -1,6 +1,6 @@
 ﻿'use strict';
 
-angular.module('app.filters')
+angular.module('app.filters', [])
     .filter('range', function () {
         return function (input, total) {
             total = parseInt(total);

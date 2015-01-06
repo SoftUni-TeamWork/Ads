@@ -1,6 +1,6 @@
 ﻿'use strict';
 
-angular.module('app.controllers')
+angular.module('app.controllers', [])
     // Path: /
     .controller('HomeController', [
         '$scope', '$location', '$window', '$log', 'adsData', function($scope, $location, $window, $log, adsData) {

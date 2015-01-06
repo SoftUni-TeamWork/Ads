@@ -20,20 +20,17 @@ namespace App.Ads.SpaClient
 
             bundles.Add(new ScriptBundle("~/js/angular").Include(
                 "~/scripts/vendor/angular.js",
-                "~/scripts/vendor/angular-resource.js"));
+                "~/scripts/vendor/angular-resource.js",
+                "~/scripts/vendor/angular-ui-router.js"));
 
-            bundles.Add(new ScriptBundle("~/js/app").Include(
-                "~/scripts/vendor/angular-ui-router.js",
-                "~/scripts/filters/filters.js",
-                "~/scripts/filters/range-filter.js",
-                "~/scripts/services/services.js",
-                "~/scripts/services/ads-data.js",
-                "~/scripts/directives/directives.js",
-                "~/scripts/controllers/controllers.js",
-                "~/scripts/controllers/home-controller.js",
-                "~/scripts/controllers/login-controller.js",
-                "~/scripts/controllers/error-404-controller.js",
-                "~/scripts/app.js"));
+            bundles.Add(new ScriptBundle("~/js/app")
+                .Include("~/scripts/utils/angular-module-improved.js")
+                .IncludeDirectory("~/scripts/filters", "*.js")
+                .IncludeDirectory("~/scripts/services", "*.js")
+                .IncludeDirectory("~/scripts/directives", "*.js")
+                .IncludeDirectory("~/scripts/filters", "*.js")
+                .IncludeDirectory("~/scripts/controllers", "*.js")
+                .Include("~/scripts/app.js"));
         }
     }
 }

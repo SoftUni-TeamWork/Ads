@@ -134,15 +134,13 @@
     <Content Include="Content\app.less" />
     <Content Include="Content\variables.less" />
     <Content Include="Global.asax" />
-    <Content Include="Scripts\controllers\controllers.js" />
     <Content Include="Scripts\controllers\error-404-controller.js" />
     <Content Include="Scripts\controllers\home-controller.js" />
     <Content Include="Scripts\controllers\login-contoller.js" />
     <Content Include="Scripts\directives\directives.js" />
-    <Content Include="Scripts\filters\filters.js" />
     <Content Include="Scripts\filters\range-filter.js" />
     <Content Include="Scripts\services\ads-data.js" />
-    <Content Include="Scripts\services\services.js" />
+    <Content Include="Scripts\utils\angular-module-improved.js" />
     <Content Include="Scripts\vendor\angular-csp.css" />
     <Content Include="Scripts\vendor\angular-ui-router.js" />
     <Content Include="Scripts\vendor\angular-ui-router.min.js" />

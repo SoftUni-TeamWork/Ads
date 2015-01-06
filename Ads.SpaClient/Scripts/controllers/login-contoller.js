@@ -1,6 +1,6 @@
 ﻿'use strict';
 
-angular.module('app.controllers')
+angular.module('app.controllers', [])
     // Path: /error/404
     .controller('LoginController', [
         '$scope', '$location', '$window', function ($scope, $location, $window) {
