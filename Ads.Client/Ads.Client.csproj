@@ -77,6 +77,9 @@
     <Content Include="js\controllers\login-controller.js" />
     <Content Include="js\controllers\register-controller.js" />
     <Content Include="js\controllers\right-sidebar-controller.js" />
+    <Content Include="js\services\ads-services.js" />
+    <Content Include="js\services\auth-services.js" />
+    <Content Include="js\services\notify-service.js" />
     <Content Include="js\utils\angular-module-improved.js" />
     <Content Include="libs\angular\angular-resource.js" />
     <Content Include="libs\angular\angular-route.js" />
