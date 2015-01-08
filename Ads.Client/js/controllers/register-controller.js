@@ -1,7 +1,7 @@
 ﻿'use strict';
 angular.module('adsApp.controllers', [])
-    .controller('RegisterController', [
-        '$scope', function ($scope) {
-            // TODO IMPLEMENT
+    .controller('Register', [
+        '$scope', '$location', 'authService', 'notifyService', function ($scope, $location, authService, notifyService) {
+            // TODO Implement
         }
     ]);
