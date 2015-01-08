@@ -71,6 +71,9 @@
     <Content Include="css\bootstrap\bootstrap-theme.css" />
     <Content Include="css\bootstrap\bootstrap.css" />
     <Content Include="index.html" />
+    <Content Include="js\app.js" />
+    <Content Include="js\controllers\app-controller.js" />
+    <Content Include="js\utils\angular-module-improved.js" />
     <Content Include="libs\angular\angular-resource.js" />
     <Content Include="libs\angular\angular-route.js" />
     <Content Include="libs\angular\angular.js" />
@@ -81,6 +84,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="views\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
