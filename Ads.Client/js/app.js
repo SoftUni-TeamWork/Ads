@@ -1,17 +1,17 @@
 ﻿'use stict';
 
-angular.module('adsApp', ['ngRoute', 'ngResource'])
+angular.module('adsApp', ['ngRoute', 'ngResource', 'adsApp.controllers', 'adsApp.services'])
     .constant('baseServiceUrl', 'http://localhost:1337//')
     .constant('pageSize', 2)
     .config(function($routeProvider) {
         $routeProvider.when('/', {
             templateUrl: 'views/home.html',
-            controller: 'home-controller'
+            controller: 'HomeController'
         });
 
         $routeProvider.when('/login', {
             templateUrl: 'views/login.html',
-            controller: 'login-controller'
+            controller: 'LoginController'
         });
 
         // TODO: define a route for the register controller
