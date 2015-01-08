@@ -1,7 +1,7 @@
 ﻿'use strict';
 angular.module('adsApp.controllers', [])
     .controller('RightSidebarController', [
-        '$scope', function ($scope) {
+        '$scope', 'categoriesService', 'townsService', function ($scope, categoriesService, townsService) {
             // TODO IMPLEMENT
         }
     ]);
