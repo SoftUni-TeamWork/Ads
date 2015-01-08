@@ -77,8 +77,8 @@
     <Content Include="js\controllers\login-controller.js" />
     <Content Include="js\controllers\register-controller.js" />
     <Content Include="js\controllers\right-sidebar-controller.js" />
-    <Content Include="js\services\ads-services.js" />
-    <Content Include="js\services\auth-services.js" />
+    <Content Include="js\services\ads-service.js" />
+    <Content Include="js\services\auth-service.js" />
     <Content Include="js\services\notify-service.js" />
     <Content Include="js\utils\angular-module-improved.js" />
     <Content Include="libs\angular\angular-resource.js" />
@@ -94,6 +94,7 @@
     <Content Include="views\partial\right-sidebar.html" />
     <Content Include="views\register.html" />
     <Content Include="Web.config" />
+    <None Include="_references.js" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
