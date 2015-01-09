@@ -2,15 +2,21 @@
     <li ng-repeat="ad in data.ads" class="box">
         <h1>{{ad.title}}</h1>
         <div><strong>Date:</strong> {{ad.date | date:'dd-MMM-yyyy'}}</div>
-        <div ng-if='ad.imageDataUrl'>
-            <strong>Image:</strong>
+        <div ng-if='ad.imageDataUrl' class="col-md-4">
             <img class="ad-image" ng-src="{{ad.imageDataUrl}}" />
         </div>
-        // TODO: display all other fields for the current ad
+        <div class="col-md-8">
+            <div class="row">{{ ad.text }}</div>
+            <div class="row">
+                <p>Name <span>{{ ad.ownerName }}</span></p>
+                <p>Email: <span><a ng-href="mailto:{{ad.ownerEmail}}">{{ad.ownerEmail}}</a></span></p>
+                <p>Tel. <span>{{ad.ownerPhone}}</span></p>
+            </div>
+        </div>
     </li>
 </ul>
 
-<pagination total-items="data.numItems" ng-model="adsParams.startPage"
+<pagination ng-if="data.numPages > 1" total-items="data.numItems" ng-model="adsParams.startPage"
             items-per-page="adsParams.pageSize" ng-change="reloadAds()"
             max-size="9" boundary-links="true">
 </pagination>
