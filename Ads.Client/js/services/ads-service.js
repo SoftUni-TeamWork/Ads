@@ -3,9 +3,11 @@ angular.module('adsApp.services', [])
     .factory('adsService', [
         '$resource', 'baseServiceUrl', function($resource, baseServiceUrl) {
             var adsResource = $resource(
-                baseServiceUrl + 'api/ads?PageSize=:pageSize&StartPage:=startPage',
+                baseServiceUrl + 'api/ads?PageSize=:pageSize&StartPage:=startPage&CategoryId:=categoryId&TownId:=townId',
                 { pageSize: '@pageSize' },
-                { startPage: '@startPage' }
+                { startPage: '@startPage' },
+                { categoryId: '@categoryId' },
+                { townId: '@townId' }
             );
 
             return {

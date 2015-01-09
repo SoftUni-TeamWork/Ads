@@ -1,7 +1,7 @@
 ﻿'use strict';
 angular.module('adsApp.controllers', [])
     .controller('RightSidebarController', [
-        '$scope', 'categoriesService', 'townsService', function($scope, categoriesService, townsService) {
+        '$scope', '$rootScope', 'categoriesService', 'townsService', function ($scope, $rootScope, categoriesService, townsService) {
             categoriesService.getCategories().$promise.then(function(data) {
                     $scope.categories = data;
                 },
@@ -18,10 +18,12 @@ angular.module('adsApp.controllers', [])
 
             $scope.categoryClicked = function (clickedCategoryId) {
                 $scope.selectedCategoryId = clickedCategoryId;
+                $rootScope.$broadcast('categorySelectionChanged', clickedCategoryId);
             }
 
             $scope.townClicked = function (clickedTownId) {
                 $scope.selectedTownId = clickedTownId;
+                $rootScope.$broadcast('townSelectionChanged', clickedTownId);
             }
         }
     ]);
