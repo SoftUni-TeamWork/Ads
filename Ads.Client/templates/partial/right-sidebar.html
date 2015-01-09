@@ -1,9 +1,19 @@
 ﻿<div class="box">
     <h2>Categories</h2>
-    TODO
+    <ul class="sidebar-menu">
+        <li class="special">All</li>
+        <li ng-repeat="category in categories">
+            {{category.name}}
+        </li>
+    </ul>
 </div>
 
 <div class="box">
     <h2>Towns</h2>
-    TODO
+    <ul class="sidebar-menu">
+        <li class="special">All</li>
+        <li ng-repeat="town in towns">
+            {{town.name}}
+        </li>
+    </ul>
 </div>
