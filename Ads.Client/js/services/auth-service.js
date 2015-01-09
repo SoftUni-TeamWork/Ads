@@ -2,10 +2,19 @@
 
 angular.module('adsApp.services', [])
     .factory('authService', [
-        '$http', 'baseServiceUrl', function($http, basServiceUrl) {
+        '$http', '$window', 'baseServiceUrl', function ($http, $window, baseServiceUrl) {
             return {
                 login: function(userData, success, error) {
-                    // TODO
+                    var request = {
+                        method: 'POST',
+                        url: baseServiceUrl + '/api/user/login',
+                        data: userData
+                    };
+
+                    $http(request).$promise.then(function(data) {
+                        $window.sessionStorage['currentUser'] = JSON.stringify(data);
+                        success(data);
+                    }, error);
                 },
 
                 register: function(userData, success, error) {
