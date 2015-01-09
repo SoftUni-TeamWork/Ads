@@ -104,6 +104,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="js\filters\" />
     <Folder Include="templates\admin\" />
     <Folder Include="templates\user\" />
   </ItemGroup>
