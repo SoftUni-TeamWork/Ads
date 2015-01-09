@@ -1,5 +1,5 @@
 ﻿'use strict';
-angular.module('adsApp.services')
+angular.module('adsApp.services', [])
     .factory('townsService', [
         '$resource', 'baseServiceUrl', function ($resource, baseServiceUrl) {
             return {
