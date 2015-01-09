@@ -17,11 +17,11 @@ angular.module('adsApp.services', [])
                     }, error);
                 },
 
-                register: function(userData, success, error) {
-                    // TODO
+                logout: function () {
+                    delete $window.sessionStorage['currentUser'];
                 },
 
-                logout: function() {
+                register: function(userData, success, error) {
                     // TODO
                 },
 
