@@ -2,8 +2,14 @@
 angular.module('adsApp.services', [])
     .factory('categoriesService', [
         '$resource', 'baseServiceUrl', function ($resource, baseServiceUrl) {
+            var categoriesResource = $resource(
+                baseServiceUrl + '/api/categories'
+            );
+
             return {
-                // TODO: implement a service to get ads
-            };
+                getCategories: function (success, error) {
+                    return categoriesResource.get(success, error);
+                }
+            }
         }
     ]);
