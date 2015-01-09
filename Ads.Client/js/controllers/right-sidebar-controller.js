@@ -15,5 +15,13 @@ angular.module('adsApp.controllers', [])
                 function(error) {
                     debugger;
                 });
+
+            $scope.categoryClicked = function (clickedCategoryId) {
+                $scope.selectedCategoryId = clickedCategoryId;
+            }
+
+            $scope.townClicked = function (clickedTownId) {
+                $scope.selectedTownId = clickedTownId;
+            }
         }
     ]);

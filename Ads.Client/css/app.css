@@ -1,2 +1,5 @@
 ﻿body {
 }
+.selected {
+    font-style: italic;
+}
