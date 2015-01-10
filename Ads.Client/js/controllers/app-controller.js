@@ -1,8 +1,12 @@
 ﻿'use strict';
 angular.module('adsApp.controllers', [])
     .controller('AppController', [
-        '$scope', 'authService', function($scope, authService) {
+        '$scope', '$location', 'authService', 'notifyService', function ($scope, $location, authService, notifyService) {
             $scope.authService = authService;
-            $scope.data = 'kor';
+            $scope.logout = function() {
+                authService.logout();
+                notifyService.showInfo("Logout successful");
+                $location.path('/');
+            }
         }
     ]);

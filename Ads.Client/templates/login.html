@@ -1,4 +1,4 @@
-﻿<div class="box">
+﻿<form class="box" ng-submit="login(userData)">
     <h2>Login</h2>
     <p>
         <label for="username">Username:</label>
@@ -9,7 +9,7 @@
         <input type="password" id="password" ng-model="userData.password" required />
     </p>
     <p>
-        <a ng-click="login(userData)" class="button">Login</a>
+        <input type="submit" class="button" value="Login" />
         <a href="/register" class="link">Register</a>
     <p>
-</div>
+</form>
