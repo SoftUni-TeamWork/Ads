@@ -9,5 +9,14 @@ angular.module('adsApp.controllers', [])
             }, function() {
                 notifyService.showError('Unable to load towns');
             });
+
+            $scope.register = function(userData) {
+                authService.register(userData, function() {
+                    notifyService.showInfo("Succesfully registered");
+                    $location.path('/');
+                }, function(error) {
+                    notifyService.showError("User registration failed", error);
+                });
+            }
         }
     ]);
