@@ -10,19 +10,23 @@
     </p>
     <p>
         <label for="password-confirm">Confrim Password:</label>
-        <input type="password" id="password-confirm" required />
+        <input type="password" id="password-confirm" ng-model="userData.confirmPassword" required />
     </p>
 
     <p>
         <label for="name">Name:</label>
-        <input type="text" id="name" required />
+        <input type="text" id="name" ng-model="userData.name" required />
     </p>
 
     <p>
         <label for="email">Email:</label>
-        <input type="email" id="email" required />
+        <input type="email" id="email" ng-model="userData.email" required />
     </p>
-    <!-- TODO: add “phone” field -->
+    
+    <p>
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" ng-model="userData.phone" required />
+    </p>
 
     <p>
         <label for="town">Town:</label>
