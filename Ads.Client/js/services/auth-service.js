@@ -22,7 +22,16 @@ angular.module('adsApp.services', [])
             }
 
             function register(userData, success, error) {
-                // TODO
+                var request = {
+                    method: 'POST',
+                    url: baseServiceUrl + '/api/user/register',
+                    data: userData
+                };
+
+                $http(request).success(function (data) {
+                    $window.sessionStorage['currentUser'] = JSON.stringify(data);
+                    success(data);
+                }).error(error);
             }
 
             function getCurrentUser() {
@@ -74,7 +83,8 @@ angular.module('adsApp.services', [])
                 isLoggedIn: isLoggedIn,
                 isNormalUser: isNormalUser,
                 isAdmin: isAdmin,
-                getAuthHeaders: getAuthHeaders
+                getAuthHeaders: getAuthHeaders,
+                register: register
             }
         }
     ])

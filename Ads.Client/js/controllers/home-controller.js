@@ -2,7 +2,7 @@
 
 angular.module('adsApp.controllers', [])
     .controller('HomeController', [
-        '$scope', 'adsService', 'notifyService', 'pageSize', function($scope, adsService, notifyService, pageSize) {
+        '$scope', 'adsService', 'notifyService', 'pageSize', function ($scope, adsService, notifyService, pageSize) {
             $scope.adsParams = {
                 'startPage': 1,
                 'pageSize': pageSize
