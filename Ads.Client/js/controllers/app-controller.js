@@ -1,7 +1,7 @@
 ﻿'use strict';
 angular.module('adsApp.controllers', [])
     .controller('AppController', [
-        '$scope', '$location', 'authService', 'notifyService', function($scope, $location, authService, notifyService) {
+        '$scope', '$location', 'authService', 'notifyService', function ($scope, $location, authService, notifyService) {
             $scope.authService = authService;
             $scope.logout = function() {
                 authService.logout();
@@ -11,7 +11,7 @@ angular.module('adsApp.controllers', [])
 
             var currentPath = $location.path();
 
-            if (currentPath == '/register' && authService.isLoggedIn()) {
+            if (authService.isLoggedIn() && (currentPath == '/register' || currentPath == '/login')) {
                 $location.path('/');
             }
         }
