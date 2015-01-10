@@ -1,4 +1,27 @@
-﻿<div class="box">
+﻿<form class="box" ng-submit="register(userData)">
     <h2>Register</h2>
-    TODO
-</div>
+    <p>
+        <label for="username">Username:</label>
+        <input type="text" id="username" ng-model="userData.username" required />
+    </p>
+    <!-- TODO: add “password” field -->
+    <!-- TODO: add “confirm password” field -->
+    <!-- TODO: add “name” field -->
+    <!-- TODO: add “email” field -->
+    <!-- TODO: add “phone” field -->
+
+    <p>
+        <label for="town">Town:</label>
+        <select id="town" ng-model="userData.townId">
+            <option value="null" class="disabled">(None)</option>
+            <option ng-repeat="town in towns"
+                    value="{{town.id}}">
+                {{town.name}}
+            </option>
+        </select>
+    </p>
+    <p>
+        <input type="submit" class="button" value="Register" />
+        <a href="#/login" class="link">Login</a>
+    <p>
+</form>
