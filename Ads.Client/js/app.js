@@ -20,4 +20,14 @@ angular.module('adsApp', ['ngRoute', 'ngResource', 'ui.bootstrap.pagination', 'a
 
             $locationProvider.html5Mode(true);
         }
-    ]);
+    ]).run(['$rootScope', '$location', 'authService', function ($rootScope, $location, authService) {
+        $rootScope.$on('$locationChangeStart', function (event) {
+            var currentPath = $location.path();
+
+            if (authService.isLoggedIn() && (currentPath == '/register' || currentPath == '/login')) {
+                $location.path('/');
+            } else if ($location.path().indexOf("/user/") != -1 && !authService.isLoggedIn()) {
+                $location.path("/");
+            }
+        });
+    }]);

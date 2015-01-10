@@ -8,11 +8,5 @@ angular.module('adsApp.controllers', [])
                 notifyService.showInfo("Logout successful");
                 $location.path('/');
             }
-
-            var currentPath = $location.path();
-
-            if (authService.isLoggedIn() && (currentPath == '/register' || currentPath == '/login')) {
-                $location.path('/');
-            }
         }
     ]);
