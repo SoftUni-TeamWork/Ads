@@ -11,10 +11,10 @@ angular.module('adsApp.services', [])
                     data: userData
                 };
 
-                $http(request).$promise.then(function(data) {
+                $http(request).success(function(data) {
                     $window.sessionStorage['currentUser'] = JSON.stringify(data);
                     success(data);
-                }, error);
+                }).error(error);
             }
 
             function logout() {
