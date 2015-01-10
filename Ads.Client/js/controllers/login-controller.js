@@ -4,7 +4,8 @@ angular.module('adsApp.controllers', [])
         '$scope', '$location', 'authService', 'notifyService', function($scope, $location, authService, notifyService) {
             $scope.login = function(userData) {
                 authService.login(userData, function() {
-                        notifyService.showInfo("Login successfull");
+                    notifyService.showInfo("Login successfull");
+                        $location.path('/');
                     },
                     function(error) {
                         notifyService.showError(error['error_description']);
