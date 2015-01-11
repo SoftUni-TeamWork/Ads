@@ -37,17 +37,5 @@ angular.module('adsApp.controllers', [])
                     notifyService.showError('Cannot publish ad', err);
                 });
             }
-
-            $scope.deleteAd = function(id) {
-                userService.deleteAd(id).then(function () {
-                    if ($scope.data.ads.length <= 1 && $scope.adsParams.startPage > 1) {
-                        $scope.adsParams.startPage--;
-                    }
-
-                    $scope.reloadAds();
-                }, function(err) {
-                    notifyService.showError('Cannot delete ad', err);
-                });
-            }
         }
     ]);

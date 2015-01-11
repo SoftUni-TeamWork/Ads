@@ -17,6 +17,9 @@ angular.module('adsApp', ['ngRoute', 'ngResource', 'ui.bootstrap.pagination', 'a
             }).when('/user/ads', {
                 templateUrl: 'templates/user/user-ads.html',
                 controller: 'UserAdsController'
+            }).when('/user/ads/delete/:id', {
+                templateUrl: 'templates/user/delete-ad.html',
+                controller: 'DeleteController'
             }).otherwise(
                 { redirectTo: '/' }
             );
