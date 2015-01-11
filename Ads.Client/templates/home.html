@@ -1,26 +1,32 @@
-﻿<ul class="ads">
-    <li ng-repeat="ad in data.ads" class="box row">
-        <h1>{{ad.title}}</h1>
-        <div><strong>Date:</strong> {{ad.date | date:'dd-MMM-yyyy'}}</div>
-        <div ng-if='ad.imageDataUrl' class="col-md-4">
-            <img class="ad-image" ng-src="{{ad.imageDataUrl}}" />
-        </div>
-        <div class="col-md-8">
-            <div class="row">{{ ad.text }}</div>
-            <div class="row">
-                <p>Name <span>{{ ad.ownerName }}</span></p>
-                <p>Email: <span><a ng-href="mailto:{{ad.ownerEmail}}">{{ad.ownerEmail}}</a></span></p>
-                <p>Tel. <span>{{ad.ownerPhone}}</span></p>
+﻿<div class="col-md-10">
+    <ul class="ads">
+        <li ng-repeat="ad in data.ads" class="box row">
+            <h1>{{ad.title}}</h1>
+            <div><strong>Date:</strong> {{ad.date | date:'dd-MMM-yyyy'}}</div>
+            <div ng-if='ad.imageDataUrl' class="col-md-4">
+                <img class="ad-image" ng-src="{{ad.imageDataUrl}}" />
             </div>
-        </div>
-    </li>
-</ul>
+            <div class="col-md-8">
+                <div class="row">{{ ad.text }}</div>
+                <div class="row">
+                    <p>Name <span>{{ ad.ownerName }}</span></p>
+                    <p>Email: <span><a ng-href="mailto:{{ad.ownerEmail}}">{{ad.ownerEmail}}</a></span></p>
+                    <p>Tel. <span>{{ad.ownerPhone}}</span></p>
+                </div>
+            </div>
+        </li>
+    </ul>
 
-<pagination ng-if="data.numPages > 1" total-items="data.numItems" ng-model="adsParams.startPage"
-            items-per-page="adsParams.pageSize" ng-change="reloadAds()"
-            max-size="9" boundary-links="true">
-</pagination>
+    <pagination ng-if="data.numPages > 1" total-items="data.numItems" ng-model="adsParams.startPage"
+                items-per-page="adsParams.pageSize" ng-change="reloadAds()"
+                max-size="9" boundary-links="true">
+    </pagination>
 
-<div ng-if="data.ads.length==0" class="box no-data">
-    No ads found.
+    <div ng-if="data.ads.length==0" class="box no-data">
+        No ads found.
+    </div>
+</div>
+
+<div class='col-md-2 sidebar' ng-controller="RightSidebarController">
+    <div ng-include="'templates/partial/right-sidebar.html'"></div>
 </div>

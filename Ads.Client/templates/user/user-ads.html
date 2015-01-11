@@ -1,4 +1,5 @@
-﻿<ul class="ads">
+﻿
+<ul class="ads">
     <li ng-repeat="ad in data.ads" class="box row">
         <h1>{{ad.title}}</h1>
         <div><strong>Date:</strong> {{ad.date | date:'dd-MMM-yyyy'}}</div>
@@ -24,6 +25,7 @@
         </div>
     </li>
 </ul>
+
 
 <pagination ng-if="data.numPages > 1" total-items="data.numItems" ng-model="adsParams.startPage"
             items-per-page="adsParams.pageSize" ng-change="reloadAds()"
