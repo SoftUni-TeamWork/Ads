@@ -19,3 +19,4 @@
 /// <reference path="js/controllers/user-ads-controller.js" />
 /// <reference path="js/services/user-service.js" />
 /// <reference path="js/controllers/delete-ad-controller.js" />
+/// <reference path="js/controllers/my-ads-sidebar-controller.js" />

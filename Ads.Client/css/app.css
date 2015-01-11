@@ -1,5 +1,96 @@
 ﻿body {
+    background-color: #E2F0D9;
 }
-.selected {
+
+#app-header, #app-footer {
+    background-color: #A9D18E;
+}
+
+.row {
+    margin: 0;
+}
+
+#app-header {
+    overflow: auto;
+}
+
+#app-header {
+    border-bottom: 1px #507E32 solid;
+}
+
+#app-footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    border-top: 1px #507E32 solid;
+}
+
+li.selected {
     font-style: italic;
+    border: 1px solid #7F6000;
+    background-color: #DAA600;
+}
+
+.button {
+    background-color: #70AD47;
+    color: #fff;
+    border: 1px solid #61973D;
+    padding: 8px 15px;
+    border-radius: 4px;
+    margin: 10px 0;
+}
+
+.button:hover {
+    background-color: #83c855;
+}
+
+.button > a {
+    display: block;
+}
+
+ul {
+    list-style: none;
+}
+
+.sidebar-menu > li {
+    cursor: pointer;
+    padding: 5px;
+}
+
+.sidebar-menu > li > a {
+    color: #000;
+}
+
+.sidebar-menu > li > a:hover {
+    text-decoration: none;
+}
+
+a.link {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.ad {
+    height: 315px;
+}
+
+.filter {
+    overflow-y: scroll;
+    height: 210px;
+}
+
+.box {
+    background-color: #A9D18E;
+    padding: 15px 20px;
+    overflow: auto;
+    border: 1px solid #507E32;
+    margin: 10px 0;
+}
+
+.pagination {
+    margin-bottom: 50px;
+}
+
+#app-content {
+    margin: 20px 0;
 }

@@ -1,7 +1,7 @@
 ﻿'use strict';
 angular.module('adsApp.controllers', [])
     .controller('UserAdsController', [
-        '$scope', '$location', 'userService', 'notifyService', 'pageSize', function ($scope, $location, userService, notifyService, pageSize) {
+        '$scope', '$rootScope', '$location', 'userService', 'notifyService', 'pageSize', function ($scope, $rootScope, $location, userService, notifyService, pageSize) {
             $scope.$parent.pageTitle = 'My Ads';
 
             $scope.adsParams = {
@@ -37,5 +37,12 @@ angular.module('adsApp.controllers', [])
                     notifyService.showError('Cannot publish ad', err);
                 });
             }
+
+            $scope.$on('adStatusSelectionChanged', function (event, selectedStatus) {
+                console.log(selectedStatus);
+                $scope.adsParams.status = selectedStatus;
+                $scope.adsParams.startPage = 1;
+                $scope.reloadAds();
+            });
         }
     ]);

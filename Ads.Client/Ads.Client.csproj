@@ -76,6 +76,7 @@
     <Content Include="js\controllers\delete-ad-controller.js" />
     <Content Include="js\controllers\home-controller.js" />
     <Content Include="js\controllers\login-controller.js" />
+    <Content Include="js\controllers\my-ads-sidebar-controller.js" />
     <Content Include="js\controllers\register-controller.js" />
     <Content Include="js\controllers\right-sidebar-controller.js" />
     <Content Include="js\controllers\user-ads-controller.js" />
