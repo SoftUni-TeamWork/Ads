@@ -11,10 +11,10 @@ angular.module('adsApp.controllers', [])
 
             $scope.reloadAds = function () {
                 userService.getAds($scope.adsParams).$promise.then(
-                    function success(data) {
+                    function (data) {
                         $scope.data = data;
                     },
-                    function error(err) {
+                    function (err) {
                         notifyService.showError('Cannot load ads', err);
                     }
                 );
@@ -22,10 +22,12 @@ angular.module('adsApp.controllers', [])
 
             $scope.reloadAds();
 
-            //$scope.logout = function () {
-            //    authService.logout();
-            //    notifyService.showInfo("Logout successful");
-            //    $location.path('/');
-            //}
+            $scope.deactivateAd = function (id) {
+                userService.deactivateAdd(id).then(function () {
+                    $scope.reloadAds();
+                }, function(err) {
+                    notifyService.showError('Cannot deactivate ad', err);
+                });
+            }
         }
     ]);

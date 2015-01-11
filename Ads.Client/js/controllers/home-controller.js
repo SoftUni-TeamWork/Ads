@@ -12,10 +12,10 @@ angular.module('adsApp.controllers', [])
 
             $scope.reloadAds = function() {
                 adsService.getAds($scope.adsParams).$promise.then(
-                    function success(data) {
+                    function (data) {
                         $scope.data = data;
                     },
-                    function error(err) {
+                    function (err) {
                         notifyService.showError('Cannot load ads', err);
                     }
                 );

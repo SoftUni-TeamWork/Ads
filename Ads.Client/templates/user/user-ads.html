@@ -15,6 +15,9 @@
         <div class="col-md-2">
             <p>Status:</p>
             <p>{{ad.status}}</p>
+            <p>
+                <button ng-if="ad.status == 'Published'" class="button" ng-click="deactivateAd(ad.id)">Deactivate</button>
+            </p>
         </div>
     </li>
 </ul>
