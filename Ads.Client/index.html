@@ -2,9 +2,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml" ng-app="adsApp" ng-controller="AppController">
     <head>
         <title>Ads - {{ pageTitle }}</title>
+        <base href="/" />
         <link href="css/bootstrap/bootstrap.css" rel="stylesheet" />
         <link href="css/bootstrap/bootstrap-theme.css" rel="stylesheet" />
-        <base href="/" />
         <link href="css/app.css" rel="stylesheet" />
     </head>
     <body>
@@ -52,7 +52,8 @@
         <script type="text/javascript" src="js/services/auth-service.js"></script>
         <script type="text/javascript" src="js/services/notify-service.js"></script>
         <script type="text/javascript" src="js/services/towns-service.js"></script>
-        <script type="text/javascript" src="js/services/categories-services.js"></script>
+        <script type="text/javascript" src="js/services/categories-service.js"></script>
+        <script type="text/javascript" src="js/services/user-service.js"></script>
 
         <!-- Controllers -->
         <script type="text/javascript" src="js/controllers/app-controller.js"></script>
@@ -60,5 +61,6 @@
         <script type="text/javascript" src="js/controllers/login-controller.js"></script>
         <script type="text/javascript" src="js/controllers/register-controller.js"></script>
         <script type="text/javascript" src="js/controllers/right-sidebar-controller.js"></script>
+        <script type="text/javascript" src="js/controllers/user-ads-controller.js"></script>
     </body>
 </html>

@@ -1,7 +1,7 @@
 ﻿'use stict';
 
 angular.module('adsApp', ['ngRoute', 'ngResource', 'ui.bootstrap.pagination', 'adsApp.controllers', 'adsApp.services'])
-    .constant('baseServiceUrl', 'http://localhost:1337/')
+    .constant('baseServiceUrl', 'http://localhost:1337')
     .constant('pageSize', 2)
     .config([
         '$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
@@ -14,6 +14,9 @@ angular.module('adsApp', ['ngRoute', 'ngResource', 'ui.bootstrap.pagination', 'a
             }).when('/register', {
                 templateUrl: 'templates/register.html',
                 controller: 'RegisterController'
+            }).when('/user/ads', {
+                templateUrl: 'templates/user/user-ads.html',
+                controller: 'UserAdsController'
             }).otherwise(
                 { redirectTo: '/' }
             );

@@ -15,4 +15,6 @@
 /// <reference path="js/controllers/login-controller.js" />
 /// <reference path="js/controllers/home-controller.js" />
 /// <reference path="js/controllers/app-controller.js" />
-/// <reference path="js/services/categories-services.js" />
+/// <reference path="js/services/categories-service.js" />
+/// <reference path="js/controllers/user-ads-controller.js" />
+/// <reference path="js/services/user-service.js" />
