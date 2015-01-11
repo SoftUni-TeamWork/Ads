@@ -32,16 +32,9 @@ angular.module('adsApp.services', [])
                     return $http(request);
                 },
                 deleteAd: function (id) {
-                    var request = {
-                        method: 'DELETE',
-                        url: baseServiceUrl + '/api/user/ads/' + id,
-                    }
-
-                    return $http(request);
-                    //return userAdsResource.delete(id).$promise;
+                    return userAdsResource.delete({id: id}).$promise;
                 },
                 getAd: function (id) {
-                    debugger;
                     return userAdsResource.get(id).$promise;
                 }
             }

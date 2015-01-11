@@ -4,8 +4,8 @@
     <div class="row">
         <h3>{{ad.title}}</h3>
         <div><strong>Date:</strong> {{ad.date | date:'dd-MMM-yyyy'}}</div>
-        <div ng-if='ad.imageDataUrl' class="col-md-2">
-            <img class="ad-image" ng-src="{{ad.imageDataUrl}}" />
+        <div class="col-md-2">
+            <img class="ad-image" ng-src="{{ad.imageDataUrl || 'http://dummyimage.com/100x100/949494/ffffff.png&text=No+image'}}" />
         </div>
         <div class="col-md-8">
             <div>{{ ad.text }}</div>
@@ -17,7 +17,7 @@
 
     </div>
     <p>
-        <button class="button" ng-click="deleteAd(id)">Delete</button>
+        <button class="button" ng-click="deleteAd(ad.id)">Delete</button>
         <button class="button" ng-click="cancelDeleteAd()">Cancel</button>
     </p>
 </div>
