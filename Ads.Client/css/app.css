@@ -68,3 +68,7 @@ a.link {
     margin: 20px 0;
     margin-bottom: 50px;
 }
+
+.image-box > img {
+    max-width: 150px;
+}
