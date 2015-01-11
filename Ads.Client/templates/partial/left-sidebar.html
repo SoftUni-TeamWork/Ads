@@ -17,16 +17,15 @@
 <!-- Navigation box for logged in normal users (not admins) -->
 <div ng-if="authService.isNormalUser()" class="box">
     <h2>Navigation</h2>
-    {{location}}
     <ul class="sidebar-menu">
-        <li ng-class="{'selected' : location == '/'}"><a href="/">Home</a></li>
-        <li ng-class="{'selected' : location == '/'}"><a href="/user/ads">My Ads</a></li>
-        <li ng-class="{'selected' : location == '/'}"><a href="/user/ads/publish">Publish New Ad</a></li>
-        <li ng-class="{'selected' : location == '/'}"><a href="/user/edit">Edit</a></li>
+        <li ng-class="{'selected' : currentLocation == '/'}"><a href="/">Home</a></li>
+        <li ng-class="{'selected' : currentLocation == '/user/ads'}"><a href="/user/ads">My Ads</a></li>
+        <li ng-class="{'selected' : currentLocation == '/user/ads/publish'}"><a href="/user/ads/publish">Publish New Ad</a></li>
+        <li ng-class="{'selected' : currentLocation == '/user/edit'}"><a href="/user/edit">Edit</a></li>
     </ul>
 </div>
 
-<div ng-if="currentLocation == '/user/ads'" ng-controller="MyAdsSidebarController">
+<div ng-if="currentLocation == '/user/ads'" ng-controller="MyAdsSidebarController" class="box">
     <h2>My Ads</h2>
     <ul class="sidebar-menu filter">
         <li class="special"

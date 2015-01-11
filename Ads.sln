@@ -11,8 +11,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ads.Data", "Ads.Data\Ads.Da
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ads.Common", "Ads.Common\Ads.Common.csproj", "{66158F75-1774-4A77-81DB-540AD9F3E5B4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ads.SpaClient", "Ads.SpaClient\Ads.SpaClient.csproj", "{73A3936D-8885-44D0-A75B-9850FBC74076}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ads.Client", "Ads.Client\Ads.Client.csproj", "{5B7AFCF6-249C-4888-AFED-28D6FBEC6F11}"
 EndProject
 Global
@@ -37,10 +35,6 @@ Global
 		{66158F75-1774-4A77-81DB-540AD9F3E5B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{66158F75-1774-4A77-81DB-540AD9F3E5B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{66158F75-1774-4A77-81DB-540AD9F3E5B4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{73A3936D-8885-44D0-A75B-9850FBC74076}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{73A3936D-8885-44D0-A75B-9850FBC74076}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{73A3936D-8885-44D0-A75B-9850FBC74076}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{73A3936D-8885-44D0-A75B-9850FBC74076}.Release|Any CPU.Build.0 = Release|Any CPU
 		{5B7AFCF6-249C-4888-AFED-28D6FBEC6F11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5B7AFCF6-249C-4888-AFED-28D6FBEC6F11}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5B7AFCF6-249C-4888-AFED-28D6FBEC6F11}.Release|Any CPU.ActiveCfg = Release|Any CPU

@@ -1,28 +1,19 @@
-﻿body {
-    background-color: #E2F0D9;
-}
+﻿body { background-color: #E2F0D9; }
 
-#app-header, #app-footer {
-    background-color: #A9D18E;
-}
+#app-header, #app-footer { background-color: #A9D18E; }
 
-.row {
-    margin: 0;
-}
+.row { margin: 0; }
 
-#app-header {
-    overflow: auto;
-}
+#app-header { overflow: auto; }
 
-#app-header {
-    border-bottom: 1px #507E32 solid;
-}
+#app-header { border-bottom: 1px #507E32 solid; }
 
 #app-footer {
     position: fixed;
     width: 100%;
     bottom: 0;
     border-top: 1px #507E32 solid;
+    z-index: 10;
 }
 
 li.selected {
@@ -40,42 +31,28 @@ li.selected {
     margin: 10px 0;
 }
 
-.button:hover {
-    background-color: #83c855;
-}
+.button:hover { background-color: #83c855; }
 
-.button > a {
-    display: block;
-}
+.button > a { display: block; }
 
-ul {
-    list-style: none;
-}
+ul { list-style: none; }
 
 .sidebar-menu > li {
     cursor: pointer;
     padding: 5px;
 }
 
-.sidebar-menu > li > a {
-    color: #000;
-}
-
-.sidebar-menu > li > a:hover {
-    text-decoration: none;
-}
+.sidebar-menu > li > a { color: #000; text-decoration: none; }
 
 a.link {
     text-decoration: underline;
     cursor: pointer;
 }
 
-.ad {
-    height: 315px;
-}
+.ad { height: 315px; }
 
 .filter {
-    overflow-y: scroll;
+    overflow-y: auto;
     height: 210px;
 }
 
@@ -87,10 +64,7 @@ a.link {
     margin: 10px 0;
 }
 
-.pagination {
-    margin-bottom: 50px;
-}
-
 #app-content {
     margin: 20px 0;
+    margin-bottom: 50px;
 }

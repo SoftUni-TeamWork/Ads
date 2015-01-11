@@ -3,10 +3,10 @@
         <li ng-repeat="ad in data.ads" class="box row ad">
             <h1>{{ad.title}}</h1>
             <div><strong>Date:</strong> {{ad.date | date:'dd-MMM-yyyy'}}</div>
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <img class="ad-image" ng-src="{{ad.imageDataUrl || 'http://dummyimage.com/100x100/949494/ffffff.png&text=No+image'}}" />
             </div>
-            <div class="col-md-8">
+            <div class="col-md-9">
                 <div class="row">{{ ad.text }}</div>
                 <div class="row">
                     <p>Name <span>{{ ad.ownerName }}</span></p>
