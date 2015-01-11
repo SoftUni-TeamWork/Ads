@@ -23,10 +23,30 @@ angular.module('adsApp.controllers', [])
             $scope.reloadAds();
 
             $scope.deactivateAd = function (id) {
-                userService.deactivateAdd(id).then(function () {
+                userService.deactivateAd(id).then(function () {
                     $scope.reloadAds();
                 }, function(err) {
                     notifyService.showError('Cannot deactivate ad', err);
+                });
+            }
+
+            $scope.publishAgainAd = function (id) {
+                userService.publishAgainAd(id).then(function() {
+                    $scope.reloadAds();
+                }, function(err) {
+                    notifyService.showError('Cannot publish ad', err);
+                });
+            }
+
+            $scope.deleteAd = function(id) {
+                userService.deleteAd(id).then(function () {
+                    if ($scope.data.ads.length <= 1 && $scope.adsParams.startPage > 1) {
+                        $scope.adsParams.startPage--;
+                    }
+
+                    $scope.reloadAds();
+                }, function(err) {
+                    notifyService.showError('Cannot delete ad', err);
                 });
             }
         }

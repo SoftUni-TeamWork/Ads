@@ -5,11 +5,12 @@ angular.module('adsApp.services', [])
             $http.defaults.headers.common['Authorization'] = authService.getAuthHeaders().Authorization;
 
             var userAdsResource = $resource(
-                baseServiceUrl + '/api/user/ads?PageSize=:pageSize&StartPage=:startPage/',
+                baseServiceUrl + '/api/user/ads?PageSize=:pageSize&StartPage=:startPage/:id',
                 {
                     pageSize: '@pageSize',
                     startPage: '@startPage',
-                    statuts: '@status'
+                    statuts: '@status',
+                    id: '@id'
                 }
             );
 
@@ -17,13 +18,30 @@ angular.module('adsApp.services', [])
                 getAds: function(params) {
                     return userAdsResource.get(params);
                 },
-                deactivateAdd: function(id) {
+                deactivateAd: function(id) {
                     var request = {
                         method: 'PUT',
                         url: baseServiceUrl + '/api/user/ads/deactivate/' + id,
                     };
 
                     return $http(request);
+                },
+                publishAgainAd: function(id) {
+                    var request = {
+                        method: 'PUT',
+                        url: baseServiceUrl + '/api/user/ads/publishagain/' + id,
+                    }
+
+                    return $http(request);
+                },
+                deleteAd: function (id) {
+                    var request = {
+                        method: 'DELETE',
+                        url: baseServiceUrl + '/api/user/ads/' + id,
+                    }
+
+                    return $http(request);
+                    //return userAdsResource.delete(id).$promise;
                 }
             }
         }
