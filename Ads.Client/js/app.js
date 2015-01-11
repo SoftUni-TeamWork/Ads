@@ -1,6 +1,7 @@
 ﻿'use stict';
 
-angular.module('adsApp', ['ngRoute', 'ngResource', 'ui.bootstrap.pagination', 'adsApp.controllers', 'adsApp.services'])
+angular.module('adsApp', [
+    'ngRoute', 'ngResource', 'ui.bootstrap.pagination', 'validation.match', 'adsApp.controllers', 'adsApp.services'])
     .constant('baseServiceUrl', 'http://localhost:1337')
     .constant('pageSize', 2)
     .config([

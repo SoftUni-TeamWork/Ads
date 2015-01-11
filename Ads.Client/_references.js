@@ -20,3 +20,4 @@
 /// <reference path="js/services/user-service.js" />
 /// <reference path="js/controllers/delete-ad-controller.js" />
 /// <reference path="js/controllers/my-ads-sidebar-controller.js" />
+/// <reference path="libs/angular-extensions/angular-input-match.js" />

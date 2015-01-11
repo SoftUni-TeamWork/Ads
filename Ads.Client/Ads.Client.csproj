@@ -87,6 +87,7 @@
     <Content Include="js\services\towns-service.js" />
     <Content Include="js\services\user-service.js" />
     <Content Include="js\utils\angular-module-improved.js" />
+    <Content Include="libs\angular-extensions\angular-input-match.js" />
     <Content Include="libs\angular\angular-resource.js" />
     <Content Include="libs\angular\angular-route.js" />
     <Content Include="libs\angular\angular.js" />

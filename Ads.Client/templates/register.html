@@ -6,12 +6,16 @@
     </p>
     <p>
         <label for="password">Password:</label>
-        <input type="password" id="password" ng-model="userData.password" required ng-min-length="2" />
-        <span ng-show="registerForm.password.$dirty && registerForm.password.$error.minLength">Password should be at least 2 characters</span>
+        <input type="password" id="password" ng-model="userData.password" required ng-minlength="2" ng-maxlength="100" name="password" />
+        <span ng-show="registerForm.password.$dirty && registerForm.password.$error.minlength">Password should be at least 2 characters</span>
+        <span ng-show="registerForm.password.$dirty && registerForm.password.$error.maxlength">Password should be less than 100 characters</span>
     </p>
     <p>
         <label for="password-confirm">Confrim Password:</label>
-        <input type="password" id="password-confirm" ng-model="userData.confirmPassword" required />
+        <input type="password" id="password-confirm" ng-model="userData.confirmPassword" match="userData.password" required name="confirmPassword" />
+        <span ng-show="registerForm.confirmPassword.$dirty && registerForm.confirmPassword.$error.minlength">Password should be at least 2 characters</span>
+        <span ng-show="registerForm.confirmPassword.$dirty && registerForm.confirmPassword.$error.maxlength">Password should be at least 100 characters</span>
+        <span ng-show="registerForm.confirmPassword.$error.match">Password does not match</span>
     </p>
 
     <p>
