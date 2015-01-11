@@ -21,6 +21,9 @@ angular.module('adsApp', [
             }).when('/user/ads/delete/:id', {
                 templateUrl: 'templates/user/delete-ad.html',
                 controller: 'DeleteController'
+            }).when('/user/ads/publish', {
+                templateUrl: 'templates/user/new-ad.html',
+                controller: 'UserPublishNewAdController'
             }).otherwise(
                 { redirectTo: '/' }
             );

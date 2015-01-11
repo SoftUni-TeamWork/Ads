@@ -34,6 +34,9 @@ angular.module('adsApp.services', [])
                 deleteAd: function (id) {
                     return userAdsResource.delete({id: id}).$promise;
                 },
+                createNewAd: function(addData) {
+                    return userAdsResource.save(addData).$promise;
+                },
                 getAd: function (id) {
                     return userAdsResource.get(id).$promise;
                 }

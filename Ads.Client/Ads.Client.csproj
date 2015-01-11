@@ -80,6 +80,7 @@
     <Content Include="js\controllers\register-controller.js" />
     <Content Include="js\controllers\right-sidebar-controller.js" />
     <Content Include="js\controllers\user-ads-controller.js" />
+    <Content Include="js\controllers\user-publish-new-ad-controller.js" />
     <Content Include="js\services\ads-service.js" />
     <Content Include="js\services\auth-service.js" />
     <Content Include="js\services\categories-service.js" />
@@ -103,6 +104,7 @@
     <Content Include="templates\partial\right-sidebar.html" />
     <Content Include="templates\register.html" />
     <Content Include="templates\user\delete-ad.html" />
+    <Content Include="templates\user\new-ad.html" />
     <Content Include="templates\user\user-ads.html" />
     <Content Include="Web.config" />
     <None Include="_references.js" />
